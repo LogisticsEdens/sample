@@ -1,0 +1,22 @@
+page-search-fields {
+    .buttonStyle {
+        display: inline-block !important;
+        font-size: 10px;
+        line-height: 14px; //Increase here when you want text more down
+        padding: 5px;
+        background: none !important;
+    }
+    .imgStyle {
+        width: 40px;
+        height: 40px;
+        display: block !important;
+    }
+    .col-centered {
+        margin: 0 auto;
+    }
+    .imgCover {
+        background-size: cover;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Contact
+            <ion-icon float-right name="ios-mail" (click)="sendInvitation()"></ion-icon>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-searchbar class="search-bar-size" (ionInput)="findContact($event)" placeholder="Enter Name"></ion-searchbar>
+    <ion-list [hidden]="!search">
+        <ion-item *ngFor="let item of contactsfound">
+            <ion-label>{{item.displayName}}</ion-label>
+            <ion-toggle checked="false" float-right (ionChange)="toggleContacts($event, item)"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>

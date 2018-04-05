@@ -1,0 +1,27 @@
+<!--
+  Generated template for the CodeVerificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Code Verification</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    Code Send To {{number}}
+    <br>Code: {{code}}
+    <form [formGroup]="form" (ngSubmit)="onVerification()" novalidate>
+        <ion-item>
+            <ion-label floating>Code</ion-label>
+            <ion-input type="number" formControlName="enteredCode"></ion-input>
+        </ion-item>
+        <button type="submit" ion-button full>Code Verification</button>
+    </form>
+    <br>{{msg}}
+</ion-content>

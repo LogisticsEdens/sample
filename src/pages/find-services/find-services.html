@@ -1,0 +1,25 @@
+<!--
+  Generated template for the FindServicesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Services</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <label ion-item *ngFor="let item of services">
+        {{ obj.getlimitedName(item.FirstName) }}
+        <img float-right (click)="ViewProfile(item.number, item.id)" src="assets/imgs/profile.png" class="img-styling">
+        <img float-right (click)="ViewReviews(item.id)" src="assets/imgs/ratent.png" class="img-styling">
+        <img float-right (click)="ViewLocation(item.number, item.id)" src="assets/imgs/marker.png" class="img-styling">
+        <img float-right (click)="emailToAction('shajji@example.com')" src="assets/imgs/email.png" class="img-styling">
+        <img float-right (click)="showCallPrompt(item.number, item.FirstName)" src="assets/imgs/phone.jpg" class="img-styling">
+      </label>
+</ion-content>

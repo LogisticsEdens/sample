@@ -1,0 +1,36 @@
+<!--
+  Generated template for the CategoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Category</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngFor="let item of fieldLabels; let i = index" [hidden]="item.hide">
+        <ion-row text-center>
+            <ion-col class="col-centered lbl" col-4>
+                Category {{i+1}}
+            </ion-col>
+        </ion-row>
+        <ion-item (click)="changeField(item)">
+            <ion-label floating>Field</ion-label>
+            <ion-input type="text" value="{{item.label}}" class="disable"></ion-input>
+        </ion-item>
+        <ion-item (click)="changeMainCategory(mainLabels[i])">
+            <ion-label floating>Main Category</ion-label>
+            <ion-input type="text" value="{{mainLabels[i].label}}" class="disable"></ion-input>
+        </ion-item>
+        <ion-item (click)="changeSubCategory(subLabels[i])">
+            <ion-label floating>Sub Category</ion-label>
+            <ion-input type="text" value="{{subLabels[i].label}}" class="disable"></ion-input>
+        </ion-item>
+    </div>
+</ion-content>

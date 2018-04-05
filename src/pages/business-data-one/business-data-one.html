@@ -1,0 +1,64 @@
+<!--
+  Generated template for the BusinessDataOnePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>businessDataOne</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <ion-item>
+            <ion-label floating>Company Name</ion-label>
+            <ion-input type="text" formControlName="CompanyName"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Designation 1</ion-label>
+            <ion-input type="text" formControlName="DesignationOne"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Designation 2</ion-label>
+            <ion-input type="text" formControlName="DesignationTwo"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Activity</ion-label>
+            <ion-input type="text" formControlName="Activity"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Address Line 1</ion-label>
+            <ion-input type="text" formControlName="AddressLineOne"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Address Line 2</ion-label>
+            <ion-input type="text" formControlName="AddressLineTwo"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>City</ion-label>
+            <ion-input type="text" formControlName="City"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>State</ion-label>
+            <ion-input type="text" formControlName="State"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Zip Code</ion-label>
+            <ion-input type="text" formControlName="ZipCode"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Country</ion-label>
+            <ion-input type="text" formControlName="Country" Disabled> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Service Provided</ion-label>
+            <ion-input type="text" formControlName="ServiceProvided" Disabled> </ion-input>
+        </ion-item>
+        <button type="submit" ion-button full>Update</button>
+    </form>
+</ion-content>

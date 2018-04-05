@@ -1,0 +1,14 @@
+page-my-low-profile {
+    .col-centered {
+        margin: 0 auto;
+    }
+    .lbl {
+        text-decoration-color: gray;
+        text-decoration: underline;
+        color: gray;
+        font-weight: bold;
+    }
+    .disable {
+        pointer-events: none;
+    }
+}

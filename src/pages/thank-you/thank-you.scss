@@ -1,0 +1,13 @@
+page-thank-you {
+    background-color: rgba(0, 0, 0, 0.5);
+    ion-content.content {
+        top: 40%;
+        left: 10%;
+        width: 80%;
+        height: 20%;
+        border-radius: 20px;
+        .scroll-content {
+            border-radius: 20px;
+        }
+    }
+}

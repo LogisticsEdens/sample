@@ -1,0 +1,100 @@
+page-view-reviews {
+    p {
+        color: black;
+    }
+    fieldset,
+    label {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        margin: 20px;
+    }
+    .rating,
+    .total-rating {
+        border: none;
+        float: left;
+    }
+    .middle {
+        position: relative;
+        left: 20%;
+    }
+    .rating>input,
+    .total-rating>input {
+        display: none;
+    }
+    .rating>label:before,
+    .total-rating>label:before {
+        margin: 5px;
+        font-size: 2.20em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+    }
+    .rating>.half:before,
+    .total-rating>.half:before {
+        content: "\f089";
+        position: absolute;
+    }
+    .rating>label,
+    .total-rating>label {
+        color: #ddd;
+        float: right;
+    }
+    /***** CSS Magic to Highlight Stars on Hover *****/
+    .rating>input:checked~label,
+    .total-rating>input:checked~label,
+    .rating:not(:checked)>label:hover,
+    /* hover current star */
+    .rating:not(:checked)>label:hover~label {
+        color: #FFD700;
+    }
+    /* hover previous stars in list */
+    .rating>input:checked+label:hover,
+    /* hover current star when changing rating */
+    .rating>input:checked~label:hover,
+    .rating>label:hover~input:checked~label,
+    /* lighten current selection */
+    .rating>input:checked~label:hover~label {
+        color: #FFED85;
+    }
+    form ion-label,
+    div ion-label {
+        text-align: center;
+        font-size: 20px;
+    }
+    .total-rating>label[data-rating]:before {
+        content: attr(data-rating);
+        color: black;
+        font-size: 1em;
+        padding-top: 1em;
+        margin-left: -5px;
+    }
+    .comments {
+        max-height: 108px !important;
+        overflow-y: scroll;
+        margin-top: 5px;
+    }
+    ion-card-header {
+        font-weight: bold;
+        padding-bottom: 2px !important;
+        padding-top: 4px !important;
+    }
+    ion-card {
+        border-radius: 5px !important;
+        border-bottom-right-radius: 30px !important;
+    }
+    ion-card hr {
+        margin: 0 !important;
+        width: 98% !important;
+        margin-left: 1% !important;
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    ion-list {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+}

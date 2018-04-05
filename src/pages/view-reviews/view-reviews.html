@@ -1,0 +1,89 @@
+<!--
+  Generated template for the ViewReviewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <ion-navbar>
+        <ion-title>viewReviews</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div>
+        <ion-label>{{name}}</ion-label>
+        <fieldset class="total-rating">
+            <label [attr.data-rating]="ratingLabel"></label>
+            <input type="radio" id="t-star5" name="t-rating" value="5" disabled="true" [checked]="ratingStars[9].val" />
+            <label class="full" for="t-star5" title="5 stars"></label>
+            <input type="radio" id="t-star4half" name="t-rating" value="4.5" disabled="true" [checked]="ratingStars[8].val" />
+            <label class="half" for="t-star4half" title="4.5 stars"></label>
+            <input type="radio" id="t-star4" name="t-rating" value="4" disabled="true" [checked]="ratingStars[7].val" />
+            <label class="full" for="t-star4" title="4 stars"></label>
+            <input type="radio" id="t-star3half" name="t-rating" value="3.5" disabled="true" [checked]="ratingStars[6].val" />
+            <label class="half" for="t-star3half" title="3.5 stars"></label>
+            <input type="radio" id="t-star3" name="t-rating" value="3" disabled="true" [checked]="ratingStars[5].val" />
+            <label class="full" for="t-star3" title="3 stars"></label>
+            <input type="radio" id="t-star2half" name="t-rating" value="2.5" disabled="true" [checked]="ratingStars[4].val" />
+            <label class="half" for="t-star2half" title="2.5 stars"></label>
+            <input type="radio" id="t-star2" name="t-rating" value="2" disabled="true" [checked]="ratingStars[3].val" />
+            <label class="full" for="t-star2" title="2 stars"></label>
+            <input type="radio" id="t-star1half" name="t-rating" value="1.5" disabled="true" [checked]="ratingStars[2].val" />
+            <label class="half" for="t-star1half" title="1.5 stars"></label>
+            <input type="radio" id="t-star1" name="t-rating" value="1" disabled="true" [checked]="ratingStars[1].val" />
+            <label class="full" for="t-star1" title="1 star"></label>
+            <input type="radio" id="t-starhalf" name="t-rating" value="0.5" disabled="true" [checked]="ratingStars[0].val" />
+            <label class="half" for="t-starhalf" title="0.5 stars"></label>
+        </fieldset>
+    </div>
+    <div>
+        <ion-item>
+            <ion-label>Rate Us </ion-label>
+        </ion-item>
+        <fieldset class="rating middle">
+            <input type="radio" id="star5" name="rating" value="5" (click)="rateUs(5)" />
+            <label class="full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" (click)="rateUs(4)" />
+            <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" (click)="rateUs(3)" />
+            <label class="full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" (click)="rateUs(2)" />
+            <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" (click)="rateUs(1)" />
+            <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+        </fieldset>
+        <button type="submit" ion-button full (click)="submitRating()">Rate</button>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Comment</ion-label>
+                <ion-textarea formControlName="Description"></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <button type="submit" ion-button full>Send</button>
+    </form>
+    <div class="comments">
+        <ion-card>
+            <ion-card-header>
+                Amir:
+            </ion-card-header>
+            <hr>
+            <ion-card-content>
+                comment will be show here
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                Atif:
+            </ion-card-header>
+            <hr>
+            <ion-card-content>
+                comment will be show here
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<!--
+  Generated template for the ProfessionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>profession</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row text-center>
+        <ion-col class="col-centered lbl" col-4>
+            Certifications
+        </ion-col>
+    </ion-row>
+    <ion-row text-center class="row-style">
+        <ion-col class="col-centered" *ngFor="let img of imageSrcs; let i = index" col-4 ngIf="img.hide" (click)="openGallery(i)">
+            <img class="img-style" [src]="img.src" alt="What Happenend">
+        </ion-col>
+    </ion-row>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <ion-item>
+            <ion-label floating>Qualifications</ion-label>
+            <ion-input type="text" formControlName="Qualifications"> </ion-input>
+        </ion-item>
+        <ion-item *ngIf="hide">
+            <ion-label floating>Commendations</ion-label>
+            <ion-input type="text" formControlName="Commendations"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Accreditaions</ion-label>
+            <ion-input type="text" formControlName="Accreditaions"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Approvals</ion-label>
+            <ion-input type="text" formControlName="Approvals"> </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>References 1</ion-label>
+            <ion-input type="text" formControlName="References1"> </ion-input>
+        </ion-item>
+        <ion-item *ngIf="hide">
+            <ion-label floating>References 2</ion-label>
+            <ion-input type="text" formControlName="References2"> </ion-input>
+        </ion-item>
+        <ion-item *ngIf="hide">
+            <ion-label floating>References 3</ion-label>
+            <ion-input type="text" formControlName="References3"> </ion-input>
+        </ion-item>
+        <button type="submit" ion-button full>Update</button>
+    </form>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-navbar (click)="hideSearchedItems()">
+        <ion-title text-center>Quality Junction of<br> Skills</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center class="body-background">
+
+    <ion-row text-center (click)="hideSearchedItems()">
+        <p style="font-size:16px" class="col-centered">Find skill provider in your locality</p>
+    </ion-row>
+
+    <ion-searchbar id="search" [(ngModel)]="searchValue" (ionInput)="updateSearchResults()" (ionFocus)="showSearchedItems()" placeholder="Search for a Service"></ion-searchbar>
+
+    <ion-list id="categories" [hidden]="searchItems.length == 0 || hide">
+        <ion-item *ngFor="let item of searchItems" tappable (click)="selectSearchResult(item)">
+            {{ item }}
+        </ion-item>
+        <ion-item hidden></ion-item>
+    </ion-list>
+
+    <div class="categ" (click)="hideSearchedItems()">
+        <div class="a">
+            <ion-row text-center>
+                <!-- class="col-centered" -->
+                <!-- <ion-col col-3 *ngFor="let item of fields" (click)="onClickFn(item.id)">
+                    <div class="icon social"><img src="assets/imgs/category-icons/HomeImprovement.png" width="25" height="25"></div>
+                    <div class="Sname">{{item.label}}</div>
+                </ion-col> -->
+                <ion-col col-4 (click)="onClickFn(1)">
+                    <div class="icon social"><img src="assets/imgs/icons/Home Improvement.png" width="100%"></div>
+                    <div class="Sname">Home Improvement</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(2)">
+                    <div class="icon social"><img src="assets/imgs/icons/Health & Wellness.png" width="100%"></div>
+                    <div class="Sname ">Wellness Health</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(3)">
+                    <div class="icon social"><img src="assets/imgs/icons/Food.png" width="100%"></div>
+                    <div class="Sname ">Food</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(4)">
+                    <div class="icon social"><img src="assets/imgs/icons/makers.png" width="100%"></div>
+                    <div class="Sname ">Artisans Makers</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(5)">
+                    <div class="icon social"><img src="assets/imgs/icons/Automotive 2.png" width="100%"></div>
+                    <div class="Sname ">Automotive</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(6)">
+                    <div class="icon social"><img src="assets/imgs/icons/Education.png" width="100%"></div>
+                    <div class="Sname ">Entertainment Education</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(7)">
+                    <div class="icon social"><img src="assets/imgs/icons/event management.png" width="100%"></div>
+                    <div class="Sname ">Event Management</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(8)">
+                    <div class="icon social"><img src="assets/imgs/icons/Property mangement.png" width="100%"></div>
+                    <div class="Sname ">Property Management</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(9)">
+                    <div class="icon social"><img src="assets/imgs/icons/pets.png" width="100%"></div>
+                    <div class="Sname ">Pets</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(10)">
+                    <div class="icon social"><img src="assets/imgs/icons/Industrial.png" width="100%"></div>
+                    <div class="Sname ">Industrial</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(11)">
+                    <div class="icon social"><img src="assets/imgs/icons/IT.png" width="100%"></div>
+                    <div class="Sname ">Computer IT</div>
+                </ion-col>
+                <ion-col col-4 (click)="onClickFn(12)">
+                    <div class="icon social"><img src="assets/imgs/icons/Logistics.png" width="100%"></div>
+                    <div class="Sname ">Logistics</div>
+                </ion-col>
+            </ion-row>
+            <ion-card>
+                <ion-card-header (click)="onBtnClick()">
+                    Do You have a skill to offer in your locality <br/> and earn?
+                </ion-card-header>
+                <ion-card-content (click)="onBtnClick()">
+                    Become skill provider.
+                    <div class="b"> Click to GO >
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </div>
+    </div>
+    <!-- <button ion-button full (click)="openPage()">Find Services</button> -->
+</ion-content>
